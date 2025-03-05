@@ -14456,6 +14456,9 @@ fieldset:disabled .btn {
     transition: transform 0.1s ease-in-out;
     transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
+.menu-arrow {
+    font-style: normal!important;
+}
 .menu-arrow:before {
     content: "\ea61";
     font-family: tabler-icons;
@@ -15388,7 +15391,7 @@ html[data-topbar-color="dark"] .app-topbar .logo .logo-dark {
     margin-bottom: 10px;
 }
 .logo-sm img {
-    height: var(--flacto-logo-sm-height);
+    height: 45px;
 }
 .logo {
     display: block;
