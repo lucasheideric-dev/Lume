@@ -22,29 +22,31 @@
                     <table class="table table-striped mb-0">
                         <thead>
                             <tr>
-                                <th scope="col"><?= $this->Paginator->sort('id', ['label' => '#']) ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('is_active', ['label' => 'Ativo?']) ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('nome', ['label' => 'Nome']) ?></th>
+                                <th scope="col"><?= $this->Paginator->sort('is_active', ['label' => 'Ativo?']) ?></th>
+                                <th scope="col"><?= $this->Paginator->sort('ultimo_pagamento', ['label' => 'Último Pagamento']) ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('email', ['label' => 'E-mail']) ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('telefone', ['label' => 'Telefone']) ?></th>
                                 <th scope="col" class="actions"><?= __('Ações') ?></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <?= $this->Html->image('profile.png', ['style' => 'height: 25px; margin-right: 05px;']); ?>
-                                    Ann C. Thompson
-                                </td>
-                                <td>SB646 473 2057</td>
-                                <td>January 25, 1959</td>
-                                <td>January 25, 1959</td>
-                                <td>January 25, 1959</td>
-                                <td class="text-muted">
-                                    <a href="javascript: void(0);" class="link-reset fs-20 p-1"> <i class="ti ti-pencil"></i></a>
-                                    <a href="javascript: void(0);" class="link-reset fs-20 p-1"> <i class="ti ti-trash"></i></a>
-                                </td>
-                            </tr>
+                            <?php foreach ($users as $user) : ?>
+                                <tr>
+                                    <td>
+                                        <?= $this->Html->image('profile.png', ['style' => 'height: 25px; margin-right: 05px;']); ?>
+                                        <?= $user->nome . ' ' . $user->sobrenome ?>
+                                    </td>
+                                    <td><?= $user->is_active ? 'Sim' : 'Não'; ?></td>
+                                    <td><?= $user->ultimo_pagamento->format('d/m/Y'); ?></td>
+                                    <td><?= $user->email ?></td>
+                                    <td><?= $user->telefone ?></td>
+                                    <td class="text-muted">
+                                        <a href="<?= $this->Url->build(['action' => 'editar', $user->id]); ?>" class="link-reset fs-20 p-1"> <i class="ti ti-pencil"></i></a>
+                                        <a href="javascript: void(0);" class="link-reset fs-20 p-1"> <i class="ti ti-trash"></i></a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

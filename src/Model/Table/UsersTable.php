@@ -62,6 +62,16 @@ class UsersTable extends Table
             ->notEmptyString('password');
 
         $validator
+            ->add(
+                'cpassword',
+                'compareWith',
+                [
+                    'rule' => ['compareWith', 'password'],
+                    'message' => 'As senhas não conferem!'
+                ]
+            );
+
+        $validator
             ->scalar('telefone')
             ->maxLength('telefone', 30)
             ->requirePresence('telefone', 'create')

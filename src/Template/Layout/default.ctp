@@ -61,15 +61,15 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#ferramentas" aria-expanded="false" aria-controls="ferramentas" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-tool"></i></span>
                             <span class="menu-text"> Ferramentas </span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="sidebarBaseUI">
+                        <div class="collapse" id="ferramentas">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
-                                    <a href="#" class="side-nav-link">
+                                    <a href="<?= $this->Url->build(['controller' => 'Ferramentas', 'action' => 'markup']) ?>" class="side-nav-link">
                                         <span class="menu-text">Markup Tributário</span>
                                     </a>
                                 </li>
@@ -78,12 +78,12 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#usuarios" aria-expanded="false" aria-controls="usuarios" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-users"></i></span>
                             <span class="menu-text"> Usuários </span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="sidebarBaseUI">
+                        <div class="collapse" id="usuarios">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
                                     <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'index']) ?>" class="side-nav-link">
@@ -192,6 +192,7 @@
         <?= $this->Html->script('apexcharts.min.js'); ?>
         <?= $this->Html->script('jsvectormap.min.js'); ?>
         <?= $this->Html->script('world-merc.js'); ?>
+        <?= $this->Html->script('inputmask.js'); ?>
 
         <script>
             $(document).ready(function() {

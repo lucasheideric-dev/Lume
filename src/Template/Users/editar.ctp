@@ -49,11 +49,11 @@
                     </div>
                     <div class="col-6 mb-3">
                         <label for="email">Data Nascimento</label>
-                        <input class="form-control" id="data_nascimento" name="data_nascimento" type="date" name="date" data-toggle="input-mask" data-mask-format="00/00/0000">
+                        <input class="form-control" id="data_nascimento" name="data_nascimento" type="date" value="<?= $user->data_nascimento ? $user->data_nascimento->format('d/m/Y') : '' ?>" name="date" data-toggle="input-mask" data-mask-format="00/00/0000">
                     </div>
                     <div class="col-6 mb-3">
                         <label for="ultimo_pagamento">Últ. Pagamento</label>
-                        <input class="form-control" id="ultimo_pagamento" name="ultimo_pagamento" type="date" name="date" data-toggle="input-mask" data-mask-format="00/00/0000">
+                        <input class="form-control" id="ultimo_pagamento" name="ultimo_pagamento" type="date" value="<?= $user->ultimo_pagamento ? $user->ultimo_pagamento->format('d/m/Y') : '' ?>" name="date" data-toggle="input-mask" data-mask-format="00/00/0000">
                     </div>
                     <div class="col-6">
                         <?= $this->Form->control('password', ['label' => 'Senha', 'type' => 'password', 'class' => 'form-control', 'autocomplete' => 'off']); ?>
