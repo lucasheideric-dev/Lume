@@ -2324,6 +2324,10 @@ progress {
         -webkit-overflow-scrolling: touch;
     }
 }
+
+.input.text {
+    width: 100% !important;
+}
 .form-label {
     margin-bottom: 0.5rem;
 }
@@ -3173,7 +3177,7 @@ textarea.form-control-lg {
 .was-validated :valid ~ .valid-tooltip {
     display: block;
 }
-.form-control.is-valid,
+/* .form-control.is-valid,
 .was-validated .form-control:valid {
     border-color: var(--flacto-form-valid-border-color);
     padding-right: calc(1.5em + 1rem);
@@ -3181,7 +3185,7 @@ textarea.form-control-lg {
     background-repeat: no-repeat;
     background-position: right calc(0.375em + 0.25rem) center;
     background-size: calc(0.75em + 0.5rem) calc(0.75em + 0.5rem);
-}
+} */
 .form-control.is-valid:focus,
 .was-validated .form-control:valid:focus {
     border-color: var(--flacto-form-valid-border-color);
@@ -14457,7 +14461,7 @@ fieldset:disabled .btn {
     transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
 .menu-arrow {
-    font-style: normal!important;
+    font-style: normal !important;
 }
 .menu-arrow:before {
     content: "\ea61";

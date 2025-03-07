@@ -195,6 +195,7 @@
         <?= $this->Html->script('jsvectormap.min.js'); ?>
         <?= $this->Html->script('world-merc.js'); ?>
         <?= $this->Html->script('inputmask.js'); ?>
+        <?= $this->Html->script('maskMoney.js'); ?>
 
         <script>
             $(document).ready(function() {
