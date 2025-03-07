@@ -16,6 +16,8 @@
     <?= $this->Html->css('app.min', ['id' => 'app-style']) ?>
     <?= $this->Html->css('font-awesome.css') ?>
     <?= $this->Html->css('bootstrap-datepicker.min.css') ?>
+    <?= $this->Html->css('style.css'); ?>
+
 
     <?= $this->Html->meta('icon') ?>
 
